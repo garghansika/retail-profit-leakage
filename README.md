@@ -1,50 +1,40 @@
 # Retail Profit Leakage Analysis
 
-An analysis of the Superstore retail dataset to find where the business loses money and how much fixing it could recover. Built in Power BI.
+I analysed the Superstore sales dataset in Power BI to find where this retail business is losing profit, and how much it could recover.
 
 ![Dashboard](dashboard.png)
 
-## Business question
-Where is this retail business losing profit, and what would fixing it recover?
+## The question
+Where is the business losing money, and what would fixing it be worth?
 
-## Key findings
-- Overall sales were about **$2.30M** with a profit of about **$286K** (12.5% margin).
-- Order lines discounted **above 20%** (1,393 lines, about 14% of all lines) lost about **$135K** in total.
-- Profit falls steadily as discounts rise: positive up to 20%, then negative from 21% upward.
-- **Tables** is the biggest loss-maker (about -$17.7K), and almost all of that loss comes from lines discounted above 20%.
-- The **Central** region has the lowest margin (7.9%) and the heaviest discounting. The **West** has the highest margin (14.9%) and rarely discounts above 20%.
-- Estimated upside of a 20% discount cap: about **+$135K to +$179K** profit, assuming sales volume holds (see `memo.md` for assumptions).
+## What I found
+- Total sales were about $2.30M and total profit about $286K, a margin of 12.5%.
+- Discounts above 20% are the main problem. Those 1,393 order lines (about 14% of all lines) lost around $135K combined.
+- Profit is positive for orders with no discount or up to 20% off, and turns negative from 21% upward. It gets worse the higher the discount goes.
+- Tables is the biggest loss-making sub-category (about -$17.7K). Without a discount it makes money, and almost all of the loss comes from orders discounted above 20%.
+- The Central region has the lowest margin (7.9%) and the highest discounting. The West has the best margin (14.9%) and rarely discounts above 20%.
+- If discounts were capped at 20%, profit could rise by roughly $135K to $179K. This assumes sales volume stays the same, so it is an upper estimate. The assumptions are in memo.md.
 
-## Approach
-1. Loaded the Superstore CSV (9,994 rows, 21 columns) into Power BI and checked data quality (no blanks, no duplicate rows).
-2. Set data types, including parsing US-format dates.
-3. Created calculated fields: Profit Margin %, Order Year, Order Month and a Discount Band grouping (none, up to 20%, 21–40%, over 40%).
-4. Analysed profit by sub-category, region and discount band.
-5. Built a one-page dashboard with KPI cards, three charts and slicers for year, region and category.
-6. Quantified the impact of a discount cap and wrote a recommendation memo.
+## What I did
+1. Loaded the CSV (9,994 rows, 21 columns) into Power BI and checked it. There were no blanks and no duplicates.
+2. Fixed the data types, including the US-format dates.
+3. Added Profit Margin %, Order Year, Order Month and a Discount Band column (no discount, up to 20%, 21-40%, over 40%).
+4. Looked at profit by sub-category, region and discount band.
+5. Built a one-page dashboard with four KPI cards, three charts and slicers for year, region and category.
+6. Wrote a short memo with my recommendation.
 
-## Dashboard contents
-- KPI cards: Total Sales, Orders, Total Profit, Profit Margin %
-- Profit by Sub-Category
-- Profit by Region
-- Profit by Discount Band
-- Slicers: Order Year, Region, Category
-
-## Repository contents
-```
-retail-profit-leakage/
-├── README.md
-├── memo.md                         one-page recommendation for management
-├── Sample - Superstore.csv         dataset
-├── retail-profit-leakage.pbix      Power BI dashboard file
-└── dashboard.png                   dashboard screenshot
-```
+## Files in this repo
+- `README.md` - this file
+- `memo.md` - one-page recommendation
+- `Sample - Superstore.csv` - the dataset
+- `reatil-profit-leakage.pbix` - the Power BI file
+- `dashboard.png` - screenshot of the dashboard
 
 ## Tools
-Power BI Desktop (Power Query, DAX)
+Power BI Desktop (Power Query and DAX)
 
 ## Data
-Superstore sales dataset (Kaggle), 2014–2017. Not real company data.
+Superstore sales dataset from Kaggle, covering 2014 to 2017. It is sample data, not a real company.
 
-## Author
+## About me
 Hansika Garg, B.Tech Information Technology, VIT Vellore
