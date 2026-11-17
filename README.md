@@ -27,7 +27,7 @@ Where is the business losing money, and what would fixing it be worth?
 - `README.md` - this file
 - `memo.md` - one-page recommendation
 - `Sample - Superstore.csv` - the dataset
-- `reatil-profit-leakage.pbix` - the Power BI file
+- `retail-profit-leakage.pbix` - the Power BI file
 - `dashboard.png` - screenshot of the dashboard
 
 ## Tools
