@@ -2,7 +2,7 @@
 
 An analysis of the Superstore retail dataset to find where the business loses money and how much fixing it could recover. Built in Power BI.
 
-![Dashboard](images/dashboard.png)
+![Dashboard](dashboard.png)
 
 ## Business question
 Where is this retail business losing profit, and what would fixing it recover?
@@ -34,10 +34,10 @@ Where is this retail business losing profit, and what would fixing it recover?
 ```
 retail-profit-leakage/
 ├── README.md
-├── memo.md                    one-page recommendation for management
-├── data/                      Sample - Superstore.csv
-├── dashboard/                 retail-profit-leakage.pbix
-└── images/                    dashboard.png
+├── memo.md                         one-page recommendation for management
+├── Sample - Superstore.csv         dataset
+├── retail-profit-leakage.pbix      Power BI dashboard file
+└── dashboard.png                   dashboard screenshot
 ```
 
 ## Tools
